@@ -1,5 +1,0 @@
-# Ignora tutta la directory .terraform
-.terraform/
-
-# Alternativamente, per essere più specifici e ignorare solo i file binari dei provider:
-.terraform/providers/**/*.exe
