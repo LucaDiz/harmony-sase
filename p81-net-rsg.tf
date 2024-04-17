@@ -31,19 +31,19 @@ resource "azurerm_network_security_group" "p81_nsg" {
     protocol                   = "Tcp"
     source_port_range          = "*"
     destination_port_range     = "3389"
-    source_address_prefix      = "TUO_IP_PUBBLICO/32"
+    source_address_prefix      = "87.14.100.229/32" #put your public IP here
     destination_address_prefix = "*"
   }
 
   security_rule {
     name                       = "allow-ssh-from-my-ip"
-    priority                   = 100
+    priority                   = 101
     direction                  = "Inbound"
     access                     = "Allow"
     protocol                   = "Tcp"
     source_port_range          = "*"
     destination_port_range     = "22"
-    source_address_prefix      = "TUO_IP_PUBBLICO/32"
+    source_address_prefix      = "87.14.100.229/32" #put your public IP here
     destination_address_prefix = "*"
   }
 
